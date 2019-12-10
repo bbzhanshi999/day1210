@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- 引入vue的核心外部文件 -->
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="true" name="star" v-model="show"/> 林书豪 
+        
+        <img  v-show="show=='true'"    style="width:200px;height:150px;" src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike272%2C5%2C5%2C272%2C90/sign=706b8af479094b36cf9f13bfc2a517bc/9c16fdfaaf51f3def549cd4f9beef01f3a297925.jpg" />
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                show: 'false'
+            }
+        });
+    </script>
+</body>
+</html>

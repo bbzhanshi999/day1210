@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- 引入vue的核心外部文件 -->
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="lin" name="star" v-model="name"/> 林书豪 
+        <input type="radio" value="zhu" name="star" v-model="name"/> 朱一龙 
+        <input type="radio" value="qiao" name="star"  v-model="name"/> 乔碧螺殿下
+        <img  v-if="name=='lin'"    style="width:200px;height:150px;" src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike272%2C5%2C5%2C272%2C90/sign=706b8af479094b36cf9f13bfc2a517bc/9c16fdfaaf51f3def549cd4f9beef01f3a297925.jpg" />
+        <img v-else-if="name=='zhu'"  style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977787469&di=b02b7c6b1ed68de4ddfd13109dd67ea3&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180730%2F63bb0254899749fdbf34334a1ebb3951.jpeg"/>
+        <img v-else-if="name=='qiao'"  style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977808282&di=1494a92a742aad2a30e41c279f05a97b&imgtype=0&src=http%3A%2F%2Fimg2015.zdface.com%2F20191208%2F791f72d363f042358a0b658ebe856117.jpg"/>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                show: 'false',
+                name:""
+            }
+        });
+    </script>
+</body>
+</html>
